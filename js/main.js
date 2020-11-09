@@ -41,7 +41,8 @@ function getFibRecursive(number) {
 function getNumber(){
     userinput = $('#input_id').val();
     $('.fibtext').html();
-    $('#infodiv').empty()
+    $('#infodiv').empty();
+    $('#infodiv').removeClass();
     if((isNaN(uservalue))||($('#input_id').val().length === 0)){
         $('#infodiv').html(`Δεν δώσατε αριθμό`);
         $('#input_id').value = null;
@@ -53,7 +54,8 @@ function getNumber(){
     else if(userinput>250){
         $('.info.headerborder').hide();
         $('.result.headerborder').hide();
-        $('#infodiv').html(`Δεν μπορείτε να δώσετε αριθμό άνω του: <span id="numbertext">250</span>`);
+        $('#infodiv').addClass('mobile');
+        $('#infodiv').html(`<span class="infotext">Δεν μπορείτε να δώσετε αριθμό άνω του: </span><span id="numbertext">250</span>`);
         $('#loopdiv').html("");
         $('#resultdiv').empty();
         userinput = $('#input_id').val(''); 

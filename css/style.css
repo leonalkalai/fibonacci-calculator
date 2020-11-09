@@ -144,8 +144,14 @@ input:focus{
         line-height: 64px!important;
         height: auto;
     }
+   
 }
-
+@media screen and (max-width: 430px) {
+    #infodiv.mobile{
+        line-height: 50px!important;
+        height: 114px;
+    }
+}
 /* Scroll to top button */
 
 #scrolltop {
