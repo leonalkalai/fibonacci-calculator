@@ -82,5 +82,22 @@ $('#input_id').keypress(function (e) {
         $('.btn').click();
         return false;  
         }
-    });   
+}); 
+
+/* Scroll to top button */
+
+let scroll_top_button = $('#scrolltop');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    scroll_top_button.addClass('show');
+  } else {
+    scroll_top_button.removeClass('show');
+  }
+});
+
+scroll_top_button.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
 
