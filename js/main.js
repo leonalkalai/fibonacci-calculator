@@ -5,7 +5,7 @@ var userinput = null;
 let number2 = null;
 
 /*this are several ways to auto trigger flashing cursor in the input*/
-$('#input_id').select();
+$('#input_id').select();    
 //$('#input_id').focus(); 
 //$('#input_id').trigger('focus');
 //$('#input_id').trigger('click');

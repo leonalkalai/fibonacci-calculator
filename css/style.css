@@ -141,7 +141,10 @@ input:focus{
 /* media queries for mobile */
 @media screen and (max-width: 50rem) {
     #loopdiv span p {
-        width: 30%!important;
+        width: max-content!important;
+        padding: 0px 15px 0px 15px;
+        height: 85px;
+        line-height: 85px;
     }
     #resultdiv{
         line-height: 64px!important;
@@ -149,6 +152,16 @@ input:focus{
     }
    
 }
+
+@media screen and (max-width: 320px) {
+    body,#loopdiv span,#loopdiv span p,#loopdiv span h2{
+        font-size: 0.8em!important;
+    }
+    h1{
+        font-size: 1.2em!important;
+    }
+}
+
 @media screen and (max-width: 430px) {
     #infodiv.mobile{
         line-height: 50px!important;
@@ -165,7 +178,7 @@ input:focus{
     text-align: center;
     border-radius: 4px;
     position: fixed;
-    bottom: 30px;
+    bottom: 135px;
     right: 30px;
     transition: background-color .3s, opacity .5s, visibility .5s;
     opacity: 0;
